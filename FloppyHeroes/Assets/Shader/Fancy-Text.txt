@@ -1,0 +1,119 @@
+Shader "Text Effects/Fancy Text" {
+Properties {
+ _Color ("Main Color", Color) = (1.000000,1.000000,1.000000,1.000000)
+ _MainTex ("Font Texture", 2D) = "white" { }
+[HideInInspector]  _OverlayTex ("Overlay Texture", 2D) = "white" { }
+}
+SubShader { 
+ Tags { "QUEUE"="Transparent" "IGNOREPROJECTOR"="true" "RenderType"="Transparent" "PreviewType"="Plane" }
+ Pass {
+  Tags { "QUEUE"="Transparent" "IGNOREPROJECTOR"="true" "RenderType"="Transparent" "PreviewType"="Plane" }
+  ZTest Always
+  ZWrite Off
+  Cull Off
+  Blend SrcAlpha OneMinusSrcAlpha
+  GpuProgramID 21568
+Program "vp" {
+SubProgram "d3d9 " {
+GpuProgramIndex 0
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 1
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 2
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 3
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 4
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 5
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 6
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 7
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 8
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 9
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 10
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 11
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 12
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 13
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 14
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 15
+}
+}
+Program "fp" {
+SubProgram "d3d9 " {
+GpuProgramIndex 16
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 17
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 18
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 19
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 20
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 21
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 22
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 23
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 24
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 25
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 26
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 27
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 28
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 29
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 30
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 31
+}
+}
+ }
+}
+Fallback "Text Effects/Fancy Text Fallback"
+}

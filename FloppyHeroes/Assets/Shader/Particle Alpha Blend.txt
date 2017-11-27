@@ -1,0 +1,58 @@
+Shader "Particles/Alpha Blended" {
+Properties {
+ _TintColor ("Tint Color", Color) = (0.500000,0.500000,0.500000,0.500000)
+ _MainTex ("Particle Texture", 2D) = "white" { }
+ _InvFade ("Soft Particles Factor", Range(0.010000,3.000000)) = 1.000000
+}
+SubShader { 
+ Tags { "QUEUE"="Transparent" "IGNOREPROJECTOR"="true" "RenderType"="Transparent" "PreviewType"="Plane" }
+ Pass {
+  Tags { "QUEUE"="Transparent" "IGNOREPROJECTOR"="true" "RenderType"="Transparent" "PreviewType"="Plane" }
+  ZWrite Off
+  Cull Off
+  Blend SrcAlpha OneMinusSrcAlpha
+  ColorMask RGB
+  GpuProgramID 27975
+Program "vp" {
+SubProgram "d3d9 " {
+GpuProgramIndex 0
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 1
+}
+SubProgram "d3d11_9x " {
+GpuProgramIndex 2
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 3
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 4
+}
+SubProgram "d3d11_9x " {
+GpuProgramIndex 5
+}
+}
+Program "fp" {
+SubProgram "d3d9 " {
+GpuProgramIndex 6
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 7
+}
+SubProgram "d3d11_9x " {
+GpuProgramIndex 8
+}
+SubProgram "d3d9 " {
+GpuProgramIndex 9
+}
+SubProgram "d3d11 " {
+GpuProgramIndex 10
+}
+SubProgram "d3d11_9x " {
+GpuProgramIndex 11
+}
+}
+ }
+}
+}
