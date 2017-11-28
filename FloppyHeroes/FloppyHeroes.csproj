@@ -211,6 +211,24 @@
     <Reference Include="UnityEngine.SpatialTracking">
       <HintPath>D:/UnityEngine/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
+    <Reference Include="DemiLib">
+      <HintPath>Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween">
+      <HintPath>Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween43">
+      <HintPath>Assets/Demigiant/DOTween/DOTween43.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween46">
+      <HintPath>Assets/Demigiant/DOTween/DOTween46.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTween50">
+      <HintPath>Assets/Demigiant/DOTween/DOTween50.dll</HintPath>
+    </Reference>
+    <Reference Include="DOTweenPro">
+      <HintPath>Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/test/AppData/LocalLow/Unity/cache/packages/packages.unity.com/com.unity.analytics@1.0.1/UnityEngine.Analytics.dll</HintPath>
     </Reference>
@@ -219,14 +237,32 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenAnimation.cs" />
     <Compile Include="Assets\Scripts\AudioManager\AudioManager.cs" />
     <Compile Include="Assets\Scripts\CursorManager\CursorManager.cs" />
     <Compile Include="Assets\Scripts\start\iconDrop.cs" />
-    <Compile Include="Assets\Scripts\start\StartButtonGroup.cs" />
+    <Compile Include="Assets\Scripts\start\SettingPanel.cs" />
+    <Compile Include="Assets\Scripts\start\StartPanel.cs" />
     <Compile Include="Assets\Scripts\ToolTip\ToolTip.cs" />
     <Compile Include="Assets\Scripts\UIEventSystem\UIEventsHandle.cs" />
+    <Compile Include="Assets\Scripts\UIFramework\BaseUIPanel.cs" />
+    <Compile Include="Assets\Scripts\UIFramework\UIManager.cs" />
+    <Compile Include="Assets\Scripts\UIFramework\UIPanelJsonInfo.cs" />
+    <Compile Include="Assets\Scripts\UIFramework\UIRoot.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Demigiant\DOTween\DOTween.XML" />
+    <None Include="Assets\Demigiant\DOTween\DOTween43.xml" />
+    <None Include="Assets\Demigiant\DOTween\DOTween46.xml" />
+    <None Include="Assets\Demigiant\DOTween\DOTween50.xml" />
+    <None Include="Assets\Demigiant\DOTween\Editor\DOTweenEditor.XML" />
+    <None Include="Assets\Demigiant\DOTween\readme.txt" />
+    <None Include="Assets\Demigiant\DOTweenPro\DOTweenPro.XML" />
+    <None Include="Assets\Demigiant\DOTweenPro\Editor\DOTweenProEditor.XML" />
+    <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
+    <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
+    <None Include="Assets\Demigiant\DemiLib\Core\Editor\DemiEditor.xml" />
+    <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
     <None Include="Assets\Shader\Alpha-Diffuse.txt" />
     <None Include="Assets\Shader\Alpha-VertexLit.txt" />
     <None Include="Assets\Shader\CubeBlend.txt" />

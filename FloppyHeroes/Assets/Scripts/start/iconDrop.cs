@@ -11,21 +11,18 @@ public class iconDrop : MonoBehaviour {
     private List<bool> isIconDropingList = new List<bool>();//图标是否正在下落的列表
     private int curIndex = 0;//图标实例列表当前使用的下标
     private GameObject iconDropPrefab;//图标prefab
-    private Transform inCanvas;//图标父亲
-    public string inCanvasName;//图标父亲名字
     private int dropspeed = 100;//下落速度
     private int interTime = 1;//下落间隔
     private int minY = -800;//图标下落的下界
     private int rotateSpeed = 250;//旋转速度
 
-    void Awake()
+    void Start()
     {
-        inCanvas = GameObject.Find("Canvas/" + inCanvasName).transform;
         iconDropPrefab = Resources.Load<GameObject>("Prefabs/start/iconDrop");
         foreach(var icon in iconList)
         {
             GameObject go = GameObject.Instantiate(iconDropPrefab, Vector3.zero, Quaternion.identity);
-            go.transform.SetParent(inCanvas, false);
+            go.transform.SetParent(transform, false);
             iconDropInstanceList.Add(go);
             isIconDropingList.Add(false);
         }

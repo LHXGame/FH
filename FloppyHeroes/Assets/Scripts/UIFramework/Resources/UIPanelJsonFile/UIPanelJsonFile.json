@@ -1,0 +1,13 @@
+{
+"infoList":
+[
+	{
+		"panelType":"startPanel",
+		"path":"UIPanel/startPanel"
+	},
+	{
+		"panelType":"settingPanel",
+		"path":"UIPanel/settingPanel"
+	}
+]
+}
